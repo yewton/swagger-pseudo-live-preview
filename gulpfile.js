@@ -53,7 +53,7 @@ gulp.task('serve', function() {
   gutil.log('Access URL: ' + gutil.colors.cyan(accessUri));
 
   waitOn({
-    resources: [originUri], delay: 0, interval: 500, timeout: 30000
+    resources: [originUri], delay: 0, interval: 2000, timeout: 30000
   }, function (err) {
     console.log(gutil.colors.cyan('Ready.'));
   });
