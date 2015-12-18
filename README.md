@@ -18,3 +18,6 @@ docker run --rm -it -v /path/to/spec-file:/runtime/dist/spec-files -p 3000:3000 
 
 Then go to `http://<DOCKER_HOST>:3000` and you can see the preview of your spec file!
 
+Demo
+----
+![Demo](http://i.imgur.com/L5a8N07.gifv)
