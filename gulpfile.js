@@ -12,8 +12,14 @@ gulp.task('serve', function() {
   var originUri = 'http://localhost:' + editorPort;
   var accessUri = 'http://localhost:' + listenPort;
   var config = {
-    whitelist: ['/', '/app/views/main.html'],
+    whitelist: ['/', '/app/views/main.html', '/scripts/scripts.js'],
     rules: [
+      {
+        match: /[a-zA-Z]\.put/,
+        fn: function(match) {
+          return 'true||' + match;
+        }
+      },
       {
         match: /<div ui-layout="{ flow : 'column', dividerSize: '8px'}">/,
         fn: function() {
@@ -37,11 +43,15 @@ gulp.task('serve', function() {
 </style>
 <body>
 <script type="text/javascript" language="javascript">
+  var previousYamlBody = '';
   setInterval(function () {
-    b = angular.element(document.body).injector().get("Backend");
+    var b = angular.element(document.body).injector().get("Backend");
     b.load("yaml").then(function(data) {
-      b.save("yaml", data);
-    })}, 1000);
+      if (previousYamlBody != data) {
+        previousYamlBody = data;
+        b.save("yaml", data);
+      }
+    })}, 2000);
 </script><div
 */});
         }
@@ -53,7 +63,7 @@ gulp.task('serve', function() {
   gutil.log('Access URL: ' + gutil.colors.cyan(accessUri));
 
   waitOn({
-    resources: [originUri], delay: 0, interval: 2000, timeout: 30000
+    resources: [originUri], delay: 0, interval: 500, timeout: 30000
   }, function (err) {
     console.log(gutil.colors.cyan('Ready.'));
   });
