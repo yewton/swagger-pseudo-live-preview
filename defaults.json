@@ -1,0 +1,18 @@
+{
+  "disableCodeGen": true,
+  "editorOptions": {
+    "theme": "ace/theme/atom_dark"
+  },
+  "autocompleteExtension": {},
+  "useBackendForStorage": true,
+  "backendThrottle": 200,
+  "keyPressDebounceTime": 200,
+  "backendEndpoint": "/spec-files/swagger.yaml",
+  "useYamlBackend": false,
+  "disableFileMenu": true,
+  "headerBranding": false,
+  "disableNewUserIntro": true,
+  "enableTryIt": true,
+  "brandingCssClass": "",
+  "importProxyUrl": ""
+}

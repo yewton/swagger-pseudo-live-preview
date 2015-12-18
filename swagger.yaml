@@ -1,0 +1,37 @@
+---
+swagger: '2.0'
+info:
+  version: 0.0.1
+  title: How to use
+  description: |
+    You have to mount the spec directory like below:
+
+    ```
+    docker run --rm -it -v /path/to/spec-files:/runtime/dist/spec-files -p 3000:3000 yewton/swagger-pseudo-live-preview
+    ```
+
+    And the spec file must be named `swagger.yaml`.
+
+
+    Thanks!!!
+  license:
+    name: Apache-2.0
+host: localhost
+basePath: "/"
+schemes:
+- https
+consumes:
+- application/json
+produces:
+- application/json
+tags:
+- name: useage
+  description: how to use this image
+paths:
+  "/usage":
+    get:
+      description: |
+        See the description above :)
+      responses:
+        '200':
+          description: Usage Object
