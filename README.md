@@ -20,4 +20,4 @@ Then go to `http://<DOCKER_HOST>:3000` and you can see the preview of your spec 
 
 Demo
 ----
-![Demo](http://i.imgur.com/L5a8N07.gifv)
+![Demo](http://i.imgur.com/L5a8N07.gif)
