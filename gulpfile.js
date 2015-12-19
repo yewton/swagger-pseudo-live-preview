@@ -51,7 +51,7 @@ gulp.task('serve', function() {
         previousYamlBody = data;
         b.save("yaml", data);
       }
-    })}, 2000);
+    })}, 1000);
 </script><div
 */});
         }
