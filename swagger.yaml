@@ -7,7 +7,7 @@ info:
     You have to mount the spec directory like below:
 
     ```
-    docker run --rm -it -v /path/to/spec-files:/runtime/dist/spec-files -p 3000:3000 yewton/swagger-pseudo-live-preview
+    docker run -d -v /path/to/spec-files:/editor/spec-files -p 3000:3000 yewton/swagger-pseudo-live-preview
     ```
 
     And the spec file must be named `swagger.yaml`.

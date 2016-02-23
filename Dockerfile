@@ -1,4 +1,4 @@
-FROM yewton/swagger-editor:latest
+FROM swaggerapi/swagger-editor:latest
 
 RUN npm install -g gulp
 
@@ -10,7 +10,7 @@ RUN npm install
 COPY . /usr/src/app
 
 RUN chmod +x start.sh
-RUN cp -f defaults.json /runtime/dist/config/ && cp swagger.yaml /runtime/dist/spec-files/
+RUN cp -f defaults.json /editor/config/ && cp swagger.yaml /editor/spec-files/
 
 EXPOSE 3000
 CMD ["/usr/src/app/start.sh"]

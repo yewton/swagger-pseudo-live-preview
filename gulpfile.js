@@ -33,7 +33,7 @@ gulp.task('serve', function() {
         }
       },
       {
-        match: /<body><div/,
+        match: /<div class="total-wrapper" ui-view>/,
         fn: function () {
           return multi(function () {/*
 <style>
@@ -41,7 +41,7 @@ gulp.task('serve', function() {
     display: none;
   }
 </style>
-<body>
+<div class="total-wrapper" ui-view>
 <script type="text/javascript" language="javascript">
   var previousYamlBody = '';
   setInterval(function () {
@@ -52,7 +52,7 @@ gulp.task('serve', function() {
         b.save("yaml", data);
       }
     })}, 1000);
-</script><div
+</script>
 */});
         }
       }

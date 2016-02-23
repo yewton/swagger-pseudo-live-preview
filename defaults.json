@@ -8,7 +8,7 @@
   "backendThrottle": 200,
   "keyPressDebounceTime": 200,
   "backendEndpoint": "/spec-files/swagger.yaml",
-  "useYamlBackend": false,
+  "useYamlBackend": true,
   "disableFileMenu": true,
   "headerBranding": false,
   "disableNewUserIntro": true,

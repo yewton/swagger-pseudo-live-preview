@@ -13,7 +13,7 @@ The swagger spec file must be named `swagger.yaml` .
 Run the following command:
 
 ```
-docker run --rm -it -v /path/to/spec-file:/runtime/dist/spec-files -p 3000:3000 yewton/swagger-pseudo-live-preview
+docker run -d /path/to/spec-file:/editor/spec-files -p 3000:3000 yewton/swagger-pseudo-live-preview
 ```
 
 Then go to `http://<DOCKER_HOST>:3000` and you can see the preview of your spec file!

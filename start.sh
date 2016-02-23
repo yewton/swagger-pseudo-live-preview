@@ -1,7 +1,7 @@
-#!/bin/bash -xe
+#!/bin/sh -xe
 
-cd /runtime
-grunt connect:dist &
+cd /editor
+http-server --cors --port=8080 -c=-1 /editor &
 
 cd /usr/src/app
 gulp serve
